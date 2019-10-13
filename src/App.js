@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// Installed
+import { BrowserRouter as Router, Route} from 'react-router-dom'
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider  } from 'react-apollo'
+// Components
+import Homepage from './components/Homepage'
+import Contact from './components/Contact'
+import Add from './components/Add'
 
-function App() {
+const client = new ApolloClient({
+  uri : 'https://api-uswest.graphcms.com/v1/ck1l3bz8q2nt401dfguxh6ppc/master'
+})
+
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ApolloProvider client={client}>
+          <Router>
+            <Route exact path='/' component={Homepage}/>
+            <Route exact path='/edit' component={Add}/>
+            <Route exact path='/contact/:id' component={Contact}/>
+          </Router>
+      </ApolloProvider>
     </div>
   );
 }
 
-export default App;

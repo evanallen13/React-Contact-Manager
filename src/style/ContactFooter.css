@@ -1,0 +1,14 @@
+#ContactFooter{
+    position: fixed;
+    bottom : 20px;
+    width: 100vw;
+}
+
+#editBtn{
+    background: rgba(0, 0, 255, 0.733);
+    color : white;
+}
+#delBtn{
+    background-color: rgba(255, 0, 0, 0.733);
+    color : white;
+}
