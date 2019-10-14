@@ -29,8 +29,20 @@ export default function Contact(props) {
                     <br/>
                     <h1>{contact.first} {contact.last}</h1>
                     <div>
-                        <img src={phone} alt="call" style={{height : '40px', margin: '0 10px 0 10px'}}/>
-                        <img src={email} alt="email" style={{height : '40px', margin: '0 10px 0 10px'}}/>
+                        {
+                            contact.phone ?
+                            <a href={`tel:${contact.phone}`}>
+                                <img src={phone} alt="call" style={{margin: '0 10px 0 10px'}}/> 
+                            </a>
+                            : null
+                        }
+                        {
+                           contact.email ?
+                           <a href={`mailto:${contact.email}`}>
+                               <img src={email} alt="email" style={{margin: '0 10px 0 10px'}}/>
+                           </a>
+                           : null 
+                        }
                     </div>
                     <h4>Phone: </h4>
                     <h4>{contact.phone}</h4>

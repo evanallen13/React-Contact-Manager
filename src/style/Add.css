@@ -1,9 +1,25 @@
 form{
-    margin : 50px 0 0 0;
+    margin : 0 auto;
+    margin-top: 30px;
+    width : 50vw;
+    min-width: 300px;
+}
+form input{
+    display: block;
+    margin : 10px auto 0 auto;
+    border : 0;
+    border-bottom:grey solid 1px;
+    height: 25px;
+    width : 250px;
+    padding : 0 0 0 10px;
+    background-color: #dfe3ee;
 }
 
 h4{
     margin : 10px 0 5px 0
+}
+#submitBtn{
+    background-color: rgba(0, 128, 0, 0.746);
 }
 
 button{
@@ -12,4 +28,5 @@ button{
     width : 90px;
     height: 40px;
     border-radius: 5px;
+    color : white;
 }

@@ -21,20 +21,13 @@ export default function AddForm(props) {
                 setLast('')
             })
             }}>
-            <h4>First</h4>
-            <input onChange={(e) => setFirst(e.target.value)} value={First} type='text'></input>
-
-            <h4>Last</h4>
-            <input onChange={(e) => setLast(e.target.value)} value={Last} type='text'></input>
-
-            <h4>Phone Number</h4>
-            <input onChange={(e) => setEmail(e.target.value)} value={Email} type='tel'></input>
-
-            <h4>Gmail</h4>
-            <input onChange={(e) => setPhone(e.target.value)} value={Phone} type="email"></input>
+            <input onChange={(e) => setFirst(e.target.value)} value={First} type='text' placeholder="First"></input>
+            <input onChange={(e) => setLast(e.target.value)} value={Last} type='text' placeholder="Last"></input>
+            <input onChange={(e) => setEmail(e.target.value)} value={Email} type='tel' placeholder="Phone"></input>
+            <input onChange={(e) => setPhone(e.target.value)} value={Phone} type="email" placeholder="Email"></input>
 
             <br></br>
-                <button type='submit' >Submit</button>
+                <button type='submit' id='submitBtn'>Submit</button>
         </form>
     )
 }
