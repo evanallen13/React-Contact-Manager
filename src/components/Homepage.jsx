@@ -20,7 +20,7 @@ export default function Homepage() {
         <div className="Homepage">
             <div>
                 <h1 className="title">Contacts</h1>
-                <Link to={'/edit'}>
+                <Link to={'/add'}>
                     <h1 className="plus">+</h1>   
                 </Link>
             </div>

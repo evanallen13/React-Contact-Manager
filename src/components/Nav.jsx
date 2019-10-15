@@ -6,6 +6,7 @@ export default function Nav() {
     return (
         <div className="Nav">
             <Link to={'/'}><h1 className="returnHome">&#60;Contact</h1></Link>
+            <Link to={'/edit'}><h1 className="editLink">Edit</h1></Link>
         </div>
     )
 }
